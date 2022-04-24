@@ -2,7 +2,7 @@ package UTN.practicas.inscripciones;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import junit.framework.TestSuite;123
 
 /**
  * Unit test for simple App.
