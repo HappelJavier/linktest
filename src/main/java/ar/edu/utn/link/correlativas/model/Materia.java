@@ -3,6 +3,9 @@ package ar.edu.utn.link.correlativas.model;
 import java.util.Collection;
 import java.util.Objects;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+
 
 
 
@@ -10,9 +13,10 @@ import java.util.Objects;
 
 public class Materia {
 	
-	
+	@NotBlank
 	private String nombre;
 
+	@Min(2000)
 	private Integer anio;
 	private Collection<Materia> correlativas;
 	

@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CorrelativasApplication {
 
 	public static void main(String[] args) {
-		System.out.println("hola");
+		System.out.println("link");
 		SpringApplication.run(CorrelativasApplication.class, args);
 	}
 

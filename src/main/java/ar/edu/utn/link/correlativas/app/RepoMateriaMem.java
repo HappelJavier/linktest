@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import ar.edu.utn.link.correlativas.model.Materia;
 
 @Repository
-public class RepoMateriaMem {
+public class RepoMateriaMem implements RepoMateria {
 
 	private Collection<Materia> materias;
 
@@ -20,19 +20,23 @@ public class RepoMateriaMem {
 		materias = new ArrayList<Materia>(of);
 	}
 	
+	@Override
 	public Collection<Materia> all(){
 		return materias;
 	}
 
+	@Override
 	public Materia findByName(String nombreMateria) {
 		return materias.stream().filter(x -> x.getNombre().equals(nombreMateria)).findFirst().get();
 	}
 
+	@Override
 	public Collection<Materia> findByYear(Integer anio) {
 		return materias.stream().filter(x -> x.getAnio().equals(anio)
 				).collect(Collectors.toList());
 	}
 
+	@Override
 	public void save(Materia materia) throws MateriaRepetidaException {
 		
 		if(materias.contains(materia)) {
